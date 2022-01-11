@@ -4,7 +4,7 @@
  
 <img  src="snapshoot/home.PNG"  alt="首页" align=center />
 
-<img  src="snapshoot/chat.PNG"  alt="聊天" align=center />
+<img  src="snapshoot/chat.png"  alt="聊天" align=center />
 
 <img src="snapshoot/contacts.PNG"  alt="通讯录" align=center />
 
