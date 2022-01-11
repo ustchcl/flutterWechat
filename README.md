@@ -2,36 +2,17 @@
  
 **下面是效果图 **
  
- 
-
-<table>
-<tr>
-<th> 
 <img  src="snapshoot/home.PNG"  alt="首页" align=center />
-</th>  
 
-<th> 
+<img  src="snapshoot/chat.PNG"  alt="聊天" align=center />
+
 <img src="snapshoot/contacts.PNG"  alt="通讯录" align=center />
-</th>  
-</tr>
-</table>
 
-  
- 
-<table>
-<tr>
-<th> 
+
 <img src="snapshoot/find.PNG"  alt="发现" align=center /> 
-</th>  
 
-<th> 
+
 <img src="snapshoot/me.PNG"  alt="我的" align=center /> 
-</th>  
-</tr>
-</table>
-
- 
- 
 
  
 

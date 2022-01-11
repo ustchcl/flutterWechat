@@ -99,16 +99,17 @@ class XKTabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    msgs.add(Msg(false, "和同事建立工作以外的友谊"));
-    msgs.add(Msg(false, "去唠！"));
-    msgs.add(Msg(true, "😔"));
-    msgs.add(Msg(false, "又不是陌生人，有什么难的"));
-    msgs.add(Msg(true, "我说啦, 社交低能儿就是我"));
-    msgs.add(Msg(false, "那你怎么工作的"));
-    msgs.add(Msg(true, "(⊙﹏⊙)"));
-    msgs.add(Msg(true, "之前工作很多小姐姐"));
-    msgs.add(Msg(true, "不对是大姐姐."));
-    msgs.add(Msg(false, "只交接工作"));
+    msgs.add(Msg(false, "我刚才看见一个"));
+    msgs.add(Msg(false, "22岁一天相亲20次"));
+    msgs.add(Msg(false, "刚回家就被安排了"));
+    msgs.add(Msg(true, "😮还有这种事"));
+    msgs.add(Msg(true, "那是真累"));
+    msgs.add(Msg(true, "农村的啊"));
+    msgs.add(Msg(false, "那没事了"));
+    msgs.add(Msg(false, "哈哈哈"));
+    msgs.add(Msg(true, "虽然超常了"));
+    msgs.add(Msg(true, "一天相5-6个还是挺正常的"));
+    msgs.add(Msg(false, "👀"));
 
     return new Scaffold(
       appBar: AppBar(
