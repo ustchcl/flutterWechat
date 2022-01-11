@@ -61,7 +61,7 @@ class RandomWordsState extends State<RandomWords> {
           width: itemwidth, height: itemwidth),
       activeIcon: new Image.asset("assets/tabbar_mainframeHL@3x.png",
           width: itemwidth, height: itemwidth),
-      title: new Text("微信"),
+      label: "微信",
     ),
     new BottomNavigationBarItem(
       icon: new Image.asset(
@@ -74,21 +74,21 @@ class RandomWordsState extends State<RandomWords> {
         width: itemwidth,
         height: itemwidth,
       ),
-      title: new Text("通讯录"),
+      label: "通讯录",
     ),
     new BottomNavigationBarItem(
       icon: new Image.asset("assets/tabbar_discover@3x.png",
           width: itemwidth, height: itemwidth),
       activeIcon: new Image.asset("assets/tabbar_discoverHL@3x.png",
           width: itemwidth, height: itemwidth),
-      title: new Text("发现"),
+      label: "发现",
     ),
     new BottomNavigationBarItem(
       icon: new Image.asset("assets/tabbar_me@3x.png",
           width: itemwidth, height: itemwidth),
       activeIcon: new Image.asset("assets/tabbar_meHL@3x.png",
           width: itemwidth, height: itemwidth),
-      title: new Text("我"),
+      label: "我",
     ),
   ];
 
@@ -99,7 +99,7 @@ class RandomWordsState extends State<RandomWords> {
     new MineView()
   ];
   int _sindex = 2;
-  String _title = "微信";
+  String _title = "微信(7)";
 
   @override
   Widget build(BuildContext context) {
@@ -116,52 +116,64 @@ class RandomWordsState extends State<RandomWords> {
 
   Scaffold buildHome() {
     return new Scaffold(
-
-    appBar: new AppBar(
-
-      backgroundColor: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
-      elevation: 0.0,
-      title: new Text(_title),
-      actions: <Widget>[
-        new IconButton(
-          icon: new Icon(Icons.list),
-
-          onPressed: () {
-            print("点击了-index");
+      appBar: new AppBar(
+        backgroundColor: Color.fromARGB(0xff, 0xf2, 0xf2, 0xf2),
+        elevation: .5,
+        centerTitle: true,
+        title: new Text(_title,
+            style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w600,
+                fontSize: 20)),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.search),
+            color: Colors.black87,
+            onPressed: () {},
+          ),
+          new IconButton(
+            icon: new Icon(Icons.add_circle_outline),
+            color: Colors.black87,
+            onPressed: () {},
+          ),
+        ],
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+            border:
+                Border(top: BorderSide(color: Colors.grey[300], width: 0.5))),
+        child: new BottomNavigationBar(
+          unselectedItemColor: Colors.grey,
+          selectedItemColor: Color.fromARGB(0xff, 0x26, 0x73, 0x25),
+          items: listSet,
+          type: BottomNavigationBarType.fixed,
+          elevation: .5,
+          onTap: (int index) {
+            String title = "";
+            switch (index) {
+              case 0:
+                title = "微信(7)";
+                break;
+              case 1:
+                title = "通讯录";
+                break;
+              case 2:
+                title = "发现";
+                break;
+              case 3:
+                title = "我";
+                break;
+            }
+            setState(() {
+              _sindex = index;
+              _title = title;
+            });
+            print("____$index");
           },
+          currentIndex: _sindex,
         ),
-      ],
-    ),
-    bottomNavigationBar: new BottomNavigationBar(
-      unselectedItemColor: Colors.grey,
-      selectedItemColor: Color.fromARGB(0xff, 0x26, 0x73, 0x25),
-      items: listSet,
-      type: BottomNavigationBarType.fixed,
-      onTap: (int index) {
-        String title = "";
-        switch (index) {
-          case 0:
-            title = "微信";
-            break;
-          case 1:
-            title = "通讯录";
-            break;
-          case 2:
-            title = "发现";
-            break;
-          case 3:
-            title = "我";
-            break;
-        }
-        setState(() {
-          _sindex = index;
-          _title = title;
-        });
-        print("____$index");
-      },
-      currentIndex: _sindex,
-    ),
-    body: vcSet[_sindex],
-  );
+      ),
+      body: vcSet[_sindex],
+    );
   }
 }
